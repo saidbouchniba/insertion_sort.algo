@@ -1,0 +1,18 @@
+ALGORITHM Insertion_Sort
+VAR
+    tab: ARRAY_OF INTEGER;
+    i,j,x,n:INTEGER
+BEGIN
+    n:=tab.length:
+    FOR i FROM 1 TO n-1 STEP 1  DO
+        x=tab[0]
+        j:=i-1;
+        WHILE (j>=0 and tab[j]<x) DO
+            tab[j+1]:=tab[j]:
+            j:=j-1;
+        END_WHILE
+          tab[j+1]:=x;
+    END_FOR
+
+    Write("the sorted array:",tab)
+END
